@@ -81,7 +81,7 @@ index 78c979e..b344681 100644
  clean : 
  	rm -rf *.o m2handler libm2handler.a body_toupper_handler fifo_reader_handler ws_handshake_handler
 diff --git a/lib/bstr/bstraux.c b/lib/bstr/bstraux.c
-index 2bbb73b..7caf6de 100644
+index 2bbb73b..b9a663c 100644
 --- a/lib/bstr/bstraux.c
 +++ b/lib/bstr/bstraux.c
 @@ -22,6 +22,7 @@
@@ -100,10 +100,10 @@ index 2bbb73b..7caf6de 100644
 -	elsize = elsize;
 -	nelem = nelem;
 -	parm = parm;
-+    (void)(buff);
-+    (void)(elsize);
-+    (void)(nelem);
-+    (void)(parm);
++	(void)(buff);
++	(void)(elsize);
++	(void)(nelem);
++	(void)(parm);
  	return 0; /* Immediately indicate EOF. */
  }
  
@@ -150,20 +150,24 @@ index 2bbb73b..7caf6de 100644
  	switch (i + 2 - b->slen) {
  		case 0:	c0 = b->data[i] >> 2;
  				c1 = ((b->data[i] << 4) |
-@@ -600,10 +589,11 @@ bstring b;
+@@ -600,11 +589,12 @@ bstring b;
  	b = bfromcstralloc (256, "");
  	if (NULL == b || 0 > bsread (b, d, INT_MAX)) {
  		bdestroy (b);
-+        b = NULL;
-+    }
-+
- 		bsclose (d);
- 		bsclose (s);
+-		bsclose (d);
+-		bsclose (s);
 -		return NULL;
 -	}
- 	return b;
+-	return b;
++		b = NULL;
++	}
++
++	bsclose(d);
++	bsclose(s);
++	return b;
  }
  
+ struct bsUuCtx {
 @@ -931,54 +921,6 @@ int bSetChar (bstring b, int pos, char c) {
  
  #define INIT_SECURE_INPUT_LENGTH (256)

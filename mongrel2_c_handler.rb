@@ -4,7 +4,7 @@ class Mongrel2CHandler < Formula
   head 'https://github.com/derdewey/mongrel2_c_handler.git'
   homepage 'https://github.com/derdewey/mongrel2_c_handler/'
 
-  depends_on 'zeromq', 'jansson'
+  depends_on ['zeromq', 'jansson']
 
   def install
     # Build in serial. See:

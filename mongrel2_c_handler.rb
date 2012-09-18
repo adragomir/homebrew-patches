@@ -16,6 +16,8 @@ class Mongrel2CHandler < Formula
     ENV['OPTFLAGS'] = "#{ENV.cflags} #{ENV.cppflags}"
     ENV['OPTLIBS'] = ENV.ldflags
 
-    system "make", "install", "PREFIX=#{prefix}"
+    cd "lib" do
+      system "make", "install", "PREFIX=#{prefix}"
+    end
   end
 end

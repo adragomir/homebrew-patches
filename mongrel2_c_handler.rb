@@ -8,7 +8,6 @@ class Mongrel2CHandler < Formula
   depends_on 'jansson'
 
   def patches
-    # fixes something small
     DATA
   end
 
@@ -277,4 +276,3 @@ index 9c24919..c7e0112 100644
  
  #ifdef __cplusplus
  }
-

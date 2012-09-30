@@ -16,7 +16,7 @@ class Libm2handler < Formula
     ENV['OPTFLAGS'] = "#{ENV.cflags} #{ENV.cppflags}"
     ENV['OPTLIBS'] = ENV.ldflags
 
-    system "glibtoolize -c"
+    system "/usr/local/bin/glibtoolize -c"
     system "autoreconf -fv --install"
     system "autoreconf -fv --install"
     system "./configure", "PREFIX=#{prefix}"

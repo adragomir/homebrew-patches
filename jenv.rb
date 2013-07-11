@@ -5,7 +5,7 @@ class Jenv < Formula
   homepage 'https://github.com/gcuisinier/jenv'
   url 'https://github.com/gcuisinier/jenv/tarball/0.1.1'
   sha1 '3bc0b09f0f7b53e865cdbb4fda6e715cfa0ada56'
-  head 'https://github.com/gcuisinier/jenv.git', :branch => master
+  head 'https://github.com/gcuisinier/jenv.git', :branch => 'master'
 
   def install
      libexec.install Dir['*']

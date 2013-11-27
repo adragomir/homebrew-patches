@@ -1,9 +1,9 @@
 require 'formula'
 
 class TheSilverSearcher < Formula
-  homepage 'https://github.com/ggreer/the_silver_searcher'
-  head 'https://github.com/ggreer/the_silver_searcher.git'
-  url 'https://github.com/ggreer/the_silver_searcher/archive/0.18.tar.gz'
+  homepage 'https://github.com/adragomir/the_silver_searcher'
+  head 'https://github.com/adragomir/the_silver_searcher.git'
+  url 'https://github.com/adragomir/the_silver_searcher/archive/0.18.tar.gz'
   sha1 '43c399f5add3921b4fcb7c7f3d21909d81cd0559'
 
   depends_on :automake

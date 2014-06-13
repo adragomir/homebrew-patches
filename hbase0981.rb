@@ -1,6 +1,6 @@
 require 'formula'
 
-class Hbase < Formula
+class Hbase0981 < Formula
   homepage 'http://hbase.apache.org'
   url 'http://archive.apache.org/dist/hbase/hbase-0.98.1/hbase-0.98.1-hadoop2-bin.tar.gz'
   sha1 'a1bc4470975dd65f5804a31be6bf8761ca152de7'

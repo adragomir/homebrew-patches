@@ -5,9 +5,8 @@ require 'formula'
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 
 class Glances < Formula
-  homepage ''
-  url 'https://github.com/nicolargo/glances'
-  sha1 '953d7563f86fdca0e423d8b88355a3e9b948923f'
+  homepage 'https://github.com/nicolargo/glances'
+  head 'https://github.com/nicolargo/glances.git'
 
   # depends_on 'cmake' => :build
 
